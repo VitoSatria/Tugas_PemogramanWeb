@@ -1,2 +1,2 @@
-# Tugas2_HTML
-Pemograman Berbasis Web - Tugas 2 - HTML
+# Pemograman Web Berbasis Web - Semester 3
+Tugas dan latihan dari matakuliah Pemograman Berbasis Web
