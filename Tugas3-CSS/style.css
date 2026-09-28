@@ -21,3 +21,65 @@ body {
     padding: 8px 16px 24px;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid gray;
+}
+
+.nav-name {
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    transition: color 0.1 ease;
+}
+
+.nav-links a:hover {
+    color: gray;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px; 
+    margin-bottom: 30px;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+}
+
+.header-info h1 {
+    font-size: 1.45rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    color: gray;
+    margin-bottom: 3px;
+}
+
+.role {
+    color: black;
+    font-size: 0.95rem;
+}
+
+.meta {
+    color: gray;
+    font-size: 0.85rem;
+}
