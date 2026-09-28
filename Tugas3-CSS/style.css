@@ -116,3 +116,33 @@ body {
     border-radius: 8px;
 }
 
+.exp-item {
+    margin-bottom: 16px;
+}
+
+.exp-item :last-child{
+    margin-bottom: auto;
+}
+
+.exp-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.exp-top h3 {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: black;
+}
+
+.year {
+    font-size: 0.82rem;
+    color: black;
+}
+
+.exp-item p {
+    font-size: 0.92rem;
+    color: gray;
+}
