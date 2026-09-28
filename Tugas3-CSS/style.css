@@ -70,7 +70,7 @@ body {
     font-size: 1.45rem;
     font-weight: 600;
     letter-spacing: -0.3px;
-    color: gray;
+    color: black;
     margin-bottom: 3px;
 }
 
@@ -83,3 +83,36 @@ body {
     color: gray;
     font-size: 0.85rem;
 }
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: gray;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.bio  {
+    margin-bottom: 8px;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 1rem;
+    color: white;
+    background: gray;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
