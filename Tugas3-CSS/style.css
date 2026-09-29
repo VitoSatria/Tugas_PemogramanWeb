@@ -164,7 +164,7 @@ body {
 }
 
 .tool-cell {
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
     border: 1px solid #e5e5e5;
     padding: 16px;
     border-radius: 6px;
@@ -195,6 +195,7 @@ body {
     gap: 12px;
 }
 
+.card,
 .port-card {
     text-decoration: none;
     padding: 18px;
@@ -224,6 +225,7 @@ body {
     margin-top: 6px;
 }
 
+.card:hover,
 .port-card:hover {
     transform: translateY(-2px);
     border-color: #111111;
