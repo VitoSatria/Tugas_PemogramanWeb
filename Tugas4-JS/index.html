@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulir Order</title>
+    <title>Formulir</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="header">
-        <img src="profile.jpg" alt="Foto Profile" class="pp">
+        <img src="profile.jpg" alt="Foto Profil" class="avatar">
         <div class="header-info">
             <h1>Vito Satria</h1>
-            <p>255314145</p>
+            <p>NIM: 255314145</p>
         </div>
     </header>
 
     <main class="container">
-        <div id="form-awal">
+        <div id="tahap-1" class="step-card">
             <label for="nama">Nama :</label><br>
             <input type="text" id="nama" placeholder="Masukkan nama"><br><br>
 
-            <label for="jumlah">Jumlah pilihan :</label><br>
+            <label for="jumlah">Jumlah Pilihan :</label><br>
             <input type="number" id="jumlah" min="1" placeholder="Masukkan angka"><br><br>
 
-            <button type="button" id="btnOK">OK</button>
+            <button type="button" id="btn-ok-1">OK</button>
         </div>
 
-        <div id="wadah-pilih"></div>
+        <div id="wadah-dinamis"></div>
     </main>
 
     <script src="script.js"></script>
