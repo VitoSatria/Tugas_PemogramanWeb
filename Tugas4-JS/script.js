@@ -101,3 +101,28 @@ function tampilkanFormEmail() {
     wadahDinamis.insertAdjacentHTML("beforeend", html);
     document.getElementById("btn-kirim-email").addEventListener("click", tampilkanHasilAkhir);
 }
+
+function tampilkanHasilAkhir() {
+    const emailInput = document.getElementById("email").value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(emailInput)) {
+        alert("Format email tidak valid! Harap masukkan kembali dengan format: email@domain.com");
+        return;
+    }
+
+    document.getElementById("email").disabled = true;
+    document.getElementById("btn-kirim-email").disabled = true;
+    const daftarPilihanTeks = arrayPilihan.join(", ");
+    const kalimat = `Hallo, nama saya ${namaPengguna}, email ${emailInput} saya mempunyai sejumlah ${jumlahPilihan} pilihan yaitu ${daftarPilihanTeks}, dan saya memilih ${pilihanTerpilih}`;
+
+    const html = `
+        <div class="step-card">
+            <div class="output-box">
+                ${kalimat}
+            </div>
+        </div>
+    `;
+
+    wadahDinamis.insertAdjacentHTML("beforeend", html);
+}
