@@ -39,7 +39,7 @@ btnAwal.addEventListener("click", function buatInputPilihan() {
   wadahDinamis.innerHTML = html;
   document
     .getElementById("btn-simpan-pilihan")
-    .addEventListener("click", buatRadioPilihan);
+    .addEventListener("click", buatPilihan);
 });
 
 function buatPilihan(){
@@ -47,7 +47,7 @@ function buatPilihan(){
     const inputs = document.querySelectorAll(".input-teks-pilihan");
 
     for (let i=0; i<inputs.length; i++){
-        const val = inputs[i].vlaue.trim();
+        const val = inputs[i].value.trim();
         if (val === ""){
             alert('Pilihan ${i+1} jangan dikosongkan!')
             return;
