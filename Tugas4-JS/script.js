@@ -41,3 +41,38 @@ btnAwal.addEventListener("click", function buatInputPilihan() {
     .getElementById("btn-simpan-pilihan")
     .addEventListener("click", buatRadioPilihan);
 });
+
+function buatPilihan(){
+    arrayPilihan = [];
+    const inputs = document.querySelectorAll(".input-teks-pilihan");
+
+    for (let i=0; i<inputs.length; i++){
+        const val = inputs[i].vlaue.trim();
+        if (val === ""){
+            alert('Pilihan ${i+1} jangan dikosongkan!')
+            return;
+        }
+        arrayPilihan.push(val);
+    }
+
+    let html = `
+        <div class="step-card">
+            <p><strong>Pilihan :</strong></p>
+            <div class="radio-group">
+    `;
+
+    arrayPilihan.forEach((teks, index) => {
+        html += `
+            <div class="radio-item">
+                <input type="radio" id="radio-${index}" name="opsiPilihan" value="${teks}">
+                <label for="radio-${index}">${teks}</label>
+            </div>
+        `;
+    });
+
+    html += `
+            </div>
+            <button type="button" id="btn-pilih-opsi">OK</button>
+        </div>
+    `;
+}
