@@ -1,33 +1,32 @@
-const btnOkAwal = document.getElementById("btnOK");
+let namaPengguna = "";
+let jumlahPilihan = 0;
+let arrayPilihan = [];
+let pilihanTerpilih = "";
 
-btnOkAwal.addEventListener("click", function () {
-    const nama = document.getElementById("nama").value.trim();
-    const jumlah = parseInt(document.getElementById("jumlah").value);
+const btnOk1 = document.getElementById("btn-ok-1");
+const wadahDinamis = document.getElementById("wadah-dinamis");
 
-    if (nama === "") {
-        alert("Nama jangan dikosongkan!");
+btnOk1.addEventListener("click", function () {
+    const inputNama = document.getElementById("nama").value.trim();
+    const inputJumlah = parseInt(document.getElementById("jumlah").value);
+
+    if (inputNama === "") {
+        alert("Nama tidak boleh kosong!");
         return;
     }
 
-    if (isNaN(jumlah) || jumlah <= 0) {
-        alert("Masukkan jumlah lebih dari 0!");
+    if (isNaN(inputJumlah) || inputJumlah <= 0) {
+        alert("Masukkan jumlah pilihan yang valid (angka bulat lebih dari 0)!");
         return;
     }
 
-    const wadahPilih = document.getElementById("wadah-pilih");
-    wadahPilih.innerHTML = "";
-    let kontenHTML = "<br>";
+    namaPengguna = inputNama;
+    jumlahPilihan = inputJumlah;
 
-    for (let i = 1; i <= jumlah; i++) {
-        kontenHTML += `
-            <label for="pilihan-${i}">Pilihan ${i} :</label><br>
-            <input type="text" id="pilihan-${i}" class="input-pilihan" placeholder="Teks Pilihan ${i}"><br><br>
-        `;
-    }
+    document.getElementById("nama").disabled = true;
+    document.getElementById("jumlah").disabled = true;
+    btnOk1.disabled = true;
 
-    kontenHTML += `<button type="button" id="btn-ok-pilihan">OK</button>`;
-    wadahPilih.innerHTML = kontenHTML;
-
-    const daftarPilihan = [];
     
+    tampilkanTahap2();
 });
