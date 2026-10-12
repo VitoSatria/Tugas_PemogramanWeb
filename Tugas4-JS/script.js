@@ -75,4 +75,7 @@ function buatPilihan(){
             <button type="button" id="btn-pilih-opsi">OK</button>
         </div>
     `;
+
+    wadahDinamis.insertAdjacentHTML("beforeend", html);
+    document.getElementById("btn-pilih-opsi").addEventListener("click", tampilkanFormEmail);
 }
