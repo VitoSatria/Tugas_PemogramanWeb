@@ -79,3 +79,25 @@ function buatPilihan(){
     wadahDinamis.insertAdjacentHTML("beforeend", html);
     document.getElementById("btn-pilih-opsi").addEventListener("click", tampilkanFormEmail);
 }
+
+function tampilkanFormEmail() {
+    const diPilih = document.querySelector('input[name="opsiPilihan"]:checked');
+
+    if (!diPilih) {
+        alert("Silakan pilih salah satu opsi terlebih dahulu!");
+        return;
+    }
+
+    pilihanTerpilih = diPilih.value;
+    document.querySelectorAll('input[name="opsiPilihan"]').forEach(el => el.disabled = true);
+    document.getElementById("btn-pilih-opsi").disabled = true;
+    const html = `
+        <div class="step-card">
+            <label for="email">Email :</label><br>
+            <input type="text" id="email" placeholder="teks Email@domain.com"><br><br>
+            <button type="button" id="btn-kirim-email">OK</button>
+        </div>
+    `;
+    wadahDinamis.insertAdjacentHTML("beforeend", html);
+    document.getElementById("btn-kirim-email").addEventListener("click", tampilkanHasilAkhir);
+}
